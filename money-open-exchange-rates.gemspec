@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'money', '~> 6.7'
   s.add_dependency 'monetize', '~> 1.4'
   s.add_dependency 'json', '~> 1.8'
+  s.add_dependency 'open_uri_redirections', '~> 0.2.1'
   s.add_development_dependency 'rake', '~> 11'
   s.add_development_dependency 'minitest', '~> 5'
   s.add_development_dependency 'timecop', '~> 0.8'

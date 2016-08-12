@@ -18,7 +18,7 @@ class Money
     # OpenExchangeRatesBank base class
     class OpenExchangeRatesBank < Money::Bank::VariableExchange
       VERSION = ::OpenExchangeRatesBank::VERSION
-      BASE_URL = 'http://openexchangerates.org'.freeze
+      BASE_URL = 'http://openexchangerates.org/api'.freeze
       # OpenExchangeRates urls
       OER_URL = File.join(BASE_URL, 'latest.json')
       OER_HISTORICAL_URL = File.join(BASE_URL, 'historical', '%s.json')
@@ -231,7 +231,7 @@ class Money
       # @return [String] JSON content
       def read_from_url
         raise NoAppId if app_id.nil? || app_id.empty?
-        open(source_url).read
+        open(source_url, allow_redirections: :safe).read
       end
 
       # Check validity of rates response only for store in cache
