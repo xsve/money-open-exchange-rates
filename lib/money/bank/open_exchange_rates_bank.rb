@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 require 'open-uri'
+require 'open_uri_redirections'
 require 'money'
 require 'json'
 require File.expand_path('../../../open_exchange_rates_bank/version', __FILE__)
