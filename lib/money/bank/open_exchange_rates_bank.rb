@@ -231,7 +231,7 @@ class Money
       # @return [String] JSON content
       def read_from_url
         raise NoAppId if app_id.nil? || app_id.empty?
-        open(source_url, allow_redirections: :safe).read
+        open(source_url, allow_redirections: :all).read
       end
 
       # Check validity of rates response only for store in cache
